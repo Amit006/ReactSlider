@@ -26,6 +26,7 @@ const SLIDES = [
     text: "You made it, have a nice day and see you next time"
   }
 ];
+// var index = 0
 
 ReactDOM.render(<App slides={SLIDES} />, document.getElementById('root'));
 registerServiceWorker();
