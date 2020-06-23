@@ -8,8 +8,8 @@ class Slides extends React.Component {
       <div>
         <div id="navigation">
           <button data-testid="button-restart" onClick={()=>ReSet()} >Restart</button>
-          <button data-testid="button-prev" onClick={()=>PrevFn(index)}>Prev</button>
-          <button data-testid="button-next" onClick={()=>Next(index)}>Next</button>
+          <button data-testid="button-prev" disabled={!index}  onClick={()=>PrevFn(index)}>Prev</button>
+          <button data-testid="button-next" disabled={index == slides.length-1}  onClick={()=>Next(index)}>Next</button>
         </div>
         <div id="slide">
           <h1 data-testid="title">{slides[index].title }</h1>
